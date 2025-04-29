@@ -119,13 +119,17 @@ Note that the episode length is not directly comparable to the ungrouped actions
 [video](https://drive.google.com/file/d/1ig9mPsv4Vs6T-xFD96V_Wi-xlQt4vG7q/view?usp=drive_link)
 
 ## Conclusion
-None of my models acheived very good performance. 
-I should have implemented a better logging suite (graphs etc.) right away, so I could see performance changing over time. Maybe I would have spent less time doing redundant training and had a better understanding.
+None of my models acheived very good performance. I kind of expected this because of the nature of the problem. I still feel that I learned a lot about the iterative process of refining this kind of algorithm on a hard problem.
+
+Also, I should have implemented a better logging suite (graphs etc.) right away, so I could see performance changing over time. Maybe I would have spent less time doing redundant training and had a better understanding.
 
 ## Ideas for further work
 More experimentation with hyperparameters, including changing the reward clipping as a function of steps remaining.
+
 I would have tried using a CNN policy but I don't have a GPU and Colab was having dependency problems I didn't have time to solve.
-Would have been nice to try transfer learning
+
+Would have been nice to try transfer learning strategies, such as clipping the reward at the beginning to teach survival and then introducing the score to teach the model how to get higher scores.
+
 I am aware that RL algorithms can be very seed dependent, sometimes making them brittle. In other words, it may be that a model learns how to do well based on a partiuclar random seed but performance will not transfer to other random seeds. This could be a problem in future work.
 
 ## Process
@@ -524,7 +528,7 @@ With clipping and hyperparameter adjustment
 [video](https://drive.google.com/file/d/1ig9mPsv4Vs6T-xFD96V_Wi-xlQt4vG7q/view?usp=drive_link)
 
 [All videos](https://drive.google.com/drive/folders/1_2x5jwBlrk3gNLlKrzP5NjJsxzYeD-sf?usp=drive_link)
-- Citations
+## Citations
 
 Machado et al. 2017. [Revisiting the Arcade Learning Environment : Evaluation Protocols and Open Problems for General Agents](https://arxiv.org/pdf/1709.06009)
 Matt Stevens and Sabeek Pradhan. 2016. [Playing Tetris with Deep Reinforcement Learning](https://cs231n.stanford.edu/reports/2016/pdfs/121_Report.pdf)
